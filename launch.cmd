@@ -1,0 +1,1 @@
+pwsh test001.ps1

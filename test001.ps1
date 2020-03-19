@@ -1,13 +1,13 @@
 Param(
-    [Parameter()]
+    # [Parameter()]
     [switch]
     $NeedPassword,
-    [Parameter()]
+    # [Parameter()]
     [switch]
     $zip
     )
 
-function [SecureString]myInputBox {
+function myInputBox {
     param (
     )
 
@@ -63,8 +63,8 @@ $7zpath="C:\Program Files\7-Zip\7z.exe"
 $x001=(Get-ChildItem)
 [securestring]$Password
 if ($NeedPassword) {
-    $Password = myInputBox
 }
+$Password = myInputBox
 
 [System.IO.FileInfo]$y001
 foreach ($y001 in $x001) {

@@ -63,7 +63,7 @@ $7zpath="C:\Program Files\7-Zip\7z.exe"
 $x001=(Get-ChildItem)
 [string]$PressPassword
 if ($NeedPassword) {
-    $PressPassword = myInputBox
+    $PressPassword = Read-Host -Prompt "Please Type Password"
 }
 
 [System.IO.FileInfo]$y001

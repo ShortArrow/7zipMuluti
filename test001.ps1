@@ -59,7 +59,7 @@ function myInputBox {
 }
 
 # Set-PSDebug -Trace 0
-$7zpath="C:\Program Files\7-Zip\7z.exe"
+$7zpath=$env:ProgramFiles+"\7-zip\7z.exe"
 $x001=(Get-ChildItem)
 [string]$PressPassword
 if ($NeedPassword) {

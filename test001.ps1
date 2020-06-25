@@ -68,7 +68,7 @@ if ($NeedPassword) {
 
 [System.IO.FileInfo]$y001
 foreach ($y001 in $x001) {
-    if (("",".ps1",".cmd",".zip",".7z") -notcontains $y001.Extension -and !($y001.PSIsContainer) -and ($y001.Extension -ne $y001.Name)) {
+    if (("",".ps1",".cmd",".zip",".7z") -notcontains $y001.Extension -and !($y001.PSIsContainer) -and ($y001.Extension -ne $y001.Name) -and ($y001.Name -ne "readme.md")) {
         $z001=$(Join-Path $y001.Directory $($([System.IO.Path]::GetFileNameWithoutExtension("`"$y001`""))+".7z"))
         if ($null -eq $PressPassword) {
             $status=Start-Process -FilePath $7zpath -ArgumentList 'a', "-t7z", "`"$z001`"", "`"$y001`"" -NoNewWindow -Wait

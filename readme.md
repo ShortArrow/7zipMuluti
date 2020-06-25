@@ -10,7 +10,19 @@
 
 # How to Use
 
-1. Copy this directory "7zipMulti" to your desktop or another local directory.
-2. Copy to the directory where you have copied the files to be compressed.
-3. Double-click "launch.cmd" to execute. The files copied in 2 are compressed.
-4. If you want to compress with password, please execute "launch add password.cmd" instead of "launch.cmd".
+## Install
+
+Copy this directory "7zipMulti" to your desktop or another local directory.
+
+## Nomal compress
+
+
+1. Copy the files to be compressed into the directory named "7zm-input" under the directory you just copied.
+1. Double-click "launch.cmd" to execute. The files copied in 2 are compressed.
+
+## Compress with password
+
+1. Copy the files to be compressed into the directory named "7zm-input\need-password" under the directory you just copied.
+1. Double-click "launch add password.cmd" to execute it.
+1. Asked for you "Please Type Password :" and please type it.
+1. The file copied in 2 is compressed.

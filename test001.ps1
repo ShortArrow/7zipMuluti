@@ -81,3 +81,22 @@ foreach ($y001 in $x001) {
 }
 
 Write-Host "Finish" -BackgroundColor Green -ForegroundColor White
+
+if ([environment]::OSVersion.Version.Major -ge 10 ) {
+    $ToastModulePath=$env:USERPROFILE+"\Documents\PowerShell\Modules\BurntToast"
+    if (!(Test-Path $ToastModulePath)) {
+        Copy-Item -Destination $ToastModulePath -LiteralPath ".\BurntToast" -Force -Recurse
+    }
+    Import-Module BurntToast
+    # $toastParams = @{
+    #     AppLogo = C:\7zip.png 
+    #     Text = "圧縮が終わりました！"
+    #     Header = (New-BTHeader -Id 1 -Title "7zip Muluti")
+    # }
+    # New-BurntToastNotification @toastParams
+    New-BurntToastNotification -AppLogo $($(Get-Location).Path+"\7zip.png") -Text "7zip Muluti",'Mision Completed, Celebrate!'
+}
+else {
+    $ws = New-Object -com Wscript.Shell
+    $ws.Popup("圧縮が完了しました",0,"7zipMuluti",0)
+}

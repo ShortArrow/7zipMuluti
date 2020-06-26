@@ -8,6 +8,18 @@
 - Powershell 6 or later
 - 7zip
 
+# Behavior
+
+## Main behavior
+
+When you run "launch.cmd",
+Compress all files placed in folder A to 7z format.
+When you run "launch add passsword.cmd",
+Compress all files placed in folder A to 7z format with password.
+
+## Notification
+You will receive a toast when the compression is complete.
+
 # How to Use
 
 ## Install
@@ -26,3 +38,8 @@ Copy this directory "7zipMulti" to your desktop or another local directory.
 1. Double-click "launch add password.cmd" to execute it.
 1. Asked for you "Please Type Password :" and please type it.
 1. The file copied in 2 is compressed.
+
+# Thanks
+
+Deliver toast with [BurntToast](https://github.com/Windos/BurntToast).
+Special Thanks for [Windos](https://github.com/Windos)!

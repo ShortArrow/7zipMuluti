@@ -63,7 +63,7 @@ $7zpath=$env:ProgramFiles+"\7-zip\7z.exe"
 $x001=(Get-ChildItem ".\7zm-input")
 [string]$PressPassword
 if ($NeedPassword) {
-    $x001=(Get-ChildItem ".\7zm-input\need-password")
+    $x001=(Get-ChildItem ".\7zm-input-with-password")
     $PressPassword = Read-Host -Prompt "Please Type Password"
 }
 
